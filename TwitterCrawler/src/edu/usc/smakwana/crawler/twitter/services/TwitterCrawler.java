@@ -126,7 +126,7 @@ public class TwitterCrawler extends TimerTask implements StatusListener{
 		
 		TwitterCrawler twitterCrawler = new TwitterCrawler();
 		Timer timer = new Timer();
-		timer.schedule(twitterCrawler,0,60000);
+		timer.schedule(twitterCrawler,0,3600000);
 		twitterCrawler.streamInitialization();
 		twitterCrawler.setFiltersToStream(twitterCrawler.getTwitterStream());
 	}
