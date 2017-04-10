@@ -58,7 +58,16 @@ model = DtmModel(dtm_path, corpus, time_seq, num_topics=1,
                  id2word=corpus.dictionary, initialize_lda=True)
 
 
+model.save("DTModel.txt")
 #Gives top 25 topics
+tp= model.show_topics(num_topics=10, times=1, num_words=100, log=False, formatted=True)
+cnt= Counter(tp)
+for i, j in cnt:
+    print i,j.decode("utf-8")
+#for i in range(0,model.num_topics-1)):
+#    print model.show_topic
+    
+    
 topics = model.show_topic(topicid=0, time=1, num_words=100)
 cnt= Counter(topics)
 with codecs.open("topics.txt","w", "utf-8") as f:
