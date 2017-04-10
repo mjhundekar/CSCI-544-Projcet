@@ -27,7 +27,8 @@ for files in fileList:
         d=[]
         for line in f:
             for words in line.strip(" ").split(" "):
-                d.append(words.strip())
+                if len(words.strip(" ")) > 0:
+                    d.append(words.strip(" "))
         documents.append(d);
                 
     f.close()

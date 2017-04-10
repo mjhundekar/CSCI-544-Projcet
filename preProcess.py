@@ -6,7 +6,7 @@ sys.setdefaultencoding("utf-8")
 
 def readStopWords(hindiStopWords, stopWordsFileName):
     #For Hindi Stop Words Removal
-    with codecs.open("/home/ankit/NLP_Project/CSCI-544-Projcet/hindiST.txt", "r", "utf-8") as f:
+    with codecs.open("hindiST.txt", "r", "utf-8") as f:
         for line in f:
             hindiStopWords.append(line.decode("utf-8").strip("\n").strip())
     f.close()
@@ -49,13 +49,13 @@ def readSingleFile(fileName, fileOutName) :
 
 #main
 hindiStopWords=[]
-stopWordsFileName="/home/ankit/NLP_Project/CSCI-544-Projcet/hindiST.txt"
+stopWordsFileName="hindiST.txt"
 readStopWords(hindiStopWords, stopWordsFileName)
 
-inFilePath="/home/ankit/NLP_Project/NLPProject/"
-outFilePath="/home/ankit/NLP_Project/NLPProject/CleanTweets/"
+inFilePath="/home/ankit/NLP_Project/CSCI-544-Projcet/RawFiles/"
+outFilePath="/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/"
 
-fileList=os.listdir("/home/ankit/NLP_Project/NLPProject/")
+fileList=os.listdir(inFilePath)
 
 for files in fileList:
     if ".txt" in files:

@@ -27,8 +27,8 @@ def tfidf(word, curr_dict, dict_list):
     return tf(word, curr_dict) * idf(word, dict_list)
 
 
-fileList=os.listdir("/home/ankit/NLP_Project/NLPProject/CleanTweets/")
-file_path = "/home/ankit/NLP_Project/NLPProject/CleanTweets/"
+fileList=os.listdir("/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/")
+file_path = "/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/"
 
 dict_list = {}
 dict_words = {} 
@@ -75,8 +75,13 @@ for key, value in finalTfIdf.items():
 
 
 
-with open("/home/ankit/NLP_Project/NLPProject/Model/tfIdf.txt","w") as fp:
-    json.dump(finalTfIdf_Eighty,fp,encoding="utf-8", indent=2)
+with open("/home/ankit/NLP_Project/CSCI-544-Projcet/Model/OrignialTfIdf.txt","w") as fp:
+    json.dump(finalTfIdf,fp,encoding="utf-8", indent=2)
     fp.close()
 
 
+with open("/home/ankit/NLP_Project/CSCI-544-Projcet/Model/tfIdf.txt","w") as fp:
+    json.dump(finalTfIdf_Eighty,fp,encoding="utf-8", indent=2)
+    fp.close()
+
+	
