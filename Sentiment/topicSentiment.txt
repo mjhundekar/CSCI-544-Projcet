@@ -1,100 +1,100 @@
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {'1': 411, '0': 10491, '-1': 469})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
-defaultdict(<type 'int'>, {})
+tha 	  :: 0 : 51
+h 	  :: 0 : 51
+दिल्ली 	  :: 1 : 5 :: 0 : 204 :: -1 : 10
+Sir 	  :: 1 : 2 :: 0 : 55
+तलाक 	  :: 1 : 4 :: 0 : 31 :: -1 : 6
+नजर 	  :: -1 : 33
+गौरक्षाराष्ट्रधर्महै 	  :: 1 : 15 :: 0 : 108
+Jo 	  :: 0 : 39
+मुख्यमंत्री 	  :: 1 : 2 :: 0 : 43
+ab 	  :: 0 : 51
+पैदा 	  :: 0 : 38 :: -1 : 2
+बिहार 	  :: 1 : 2 :: 0 : 35 :: -1 : 2
+हूँ 	  :: 0 : 41 :: -1 : 8
+nhi 	  :: 0 : 55
+उम्र 	  :: 0 : 23 :: -1 : 10
+जाते 	  :: 0 : 46
+पाकिस्तान 	  :: 1 : 4 :: 0 : 34
+होगी 	  :: 1 : 4 :: 0 : 46 :: -1 : 2
+वालों 	  :: 0 : 50 :: -1 : 1
+रुका 	  :: 0 : 100
+MIvKKR 	  :: 0 : 26
+चल 	  :: 1 : 2 :: 0 : 47 :: -1 : 4
+बिजली 	  :: 1 : 4 :: 0 : 61 :: -1 : 4
+ॐ 	  :: 1 : 2 :: 0 : 14
+ओर 	  :: 1 : 6 :: 0 : 61 :: -1 : 2
+शाँति 	  :: 0 : 20
+ 	 
+देते 	  :: 1 : 4 :: 0 : 41 :: -1 : 7
+मातरम् 	  :: 1 : 2 :: 0 : 14 :: -1 : 2
+toh 	  :: 0 : 55
+मेरा 	  :: 0 : 69 :: -1 : 6
+माता 	  :: 1 : 8 :: 0 : 47 :: -1 : 2
+क्याचल 	  :: 0 : 100
+बढ़ाते 	  :: 0 : 235
+पढ़ाता 	  :: 0 : 241
+ओंम 	  :: 0 : 20
+k 	  :: 0 : 125
+शिवाय 	  :: 1 : 2 :: 0 : 13
+ऐसा 	  :: 1 : 6 :: 0 : 86 :: -1 : 4
+आधार 	  :: -1 : 31
+रहूँगामैं 	  :: 0 : 241
+OM 	  :: 0 : 37
+Ka 	  :: 0 : 25
+सफ़ेद 	  :: 0 : 100
+तुम 	  :: 1 : 2 :: 0 : 328 :: -1 : 11
+6 	  :: 1 : 6 :: 0 : 38 :: -1 : 4
+रहें 	  :: 1 : 16 :: 0 : 15 :: -1 : 2
+सी 	  :: 1 : 3 :: 0 : 34 :: -1 : 2
+वंदे 	  :: 1 : 2 :: 0 : 18 :: -1 : 2
+गौ 	  :: 1 : 3 :: 0 : 80 :: -1 : 2
+MisuseOfPOCSO 	  :: 1 : 6 :: 0 : 154 :: -1 : 6
+😜 	  :: 1 : 1 :: 0 : 18
+यूपी 	  :: 1 : 8 :: 0 : 75 :: -1 : 2
+सिंह 	  :: 1 : 2 :: 0 : 47 :: -1 : 1
+Bapu 	  :: 1 : 6 :: 0 : 48
+बैठक 	  :: 0 : 32 :: -1 : 1
+आग 	  :: 1 : 2 :: 0 : 49 :: -1 : 12
+जीत 	  :: 1 : 6 :: 0 : 31 :: -1 : 5
+Kuch 	  :: 0 : 32
+पानी 	  :: 0 : 68 :: -1 : 2
+प्रणाम 	  :: 1 : 12 :: 0 : 19 :: -1 : 2
+tak 	  :: 0 : 43
+तीन 	  :: 0 : 42 :: -1 : 12
+Krishna 	  :: 0 : 32
+थाली 	  :: 0 : 55
+yaad 	  :: 0 : 32
+कोशिश 	  :: 1 : 2 :: 0 : 48 :: -1 : 2
+चाहिए 	  :: 1 : 4 :: 0 : 76 :: -1 : 8
+नज़र 	  :: 1 : 4 :: -1 : 26
+karo 	  :: 0 : 40
+यादव 	  :: 1 : 2 :: 0 : 36 :: -1 : 2
+सुबह 	  :: 1 : 14 :: 0 : 31
+सबका 	  :: 1 : 4 :: 0 : 33 :: -1 : 2
+गाय 	  :: 1 : 19 :: 0 : 71 :: -1 : 4
+Asaram 	  :: 1 : 6 :: 0 : 66
+सुप्रभातम् 	  :: 0 : 22
+आया 	  :: 0 : 32 :: -1 : 2
+dekh 	  :: 0 : 34
+VoteChorBJP 	  :: 1 : 8 :: 0 : 37 :: -1 : 8
+हैकाला 	  :: 0 : 102
+केजरीवाल 	  :: 0 : 84 :: -1 : 8
+रहोवोट 	  :: 0 : 235
+K 	  :: 0 : 34
+पुलिस 	  :: 1 : 4 :: 0 : 104 :: -1 : 14
+परिवार 	  :: 1 : 4 :: 0 : 36 :: -1 : 8
+निगम 	  :: 1 : 2 :: 0 : 27 :: -1 : 10
+रहूँगापर 	  :: 0 : 241
+जाती 	  :: 1 : 2 :: 0 : 47
+गांव 	  :: 1 : 2 :: 0 : 45 :: -1 : 10
+Na 	  :: 0 : 25
+mujhe 	  :: 0 : 35
+पावन 	  :: 0 : 21 :: -1 : 10
+de 	  :: 0 : 38
+kiya 	  :: 0 : 33
+totaltv 	  :: 1 : 2 :: 0 : 73 :: -1 : 2
+स्वतंत्रता 	  :: 1 : 12 :: 0 : 8 :: -1 : 2
+सत्ता 	  :: 1 : 2 :: 0 : 29 :: -1 : 2
+कालापर 	  :: 0 : 98
+सफ़ेदरुक 	  :: 0 : 98
+rahi 	  :: 0 : 42
