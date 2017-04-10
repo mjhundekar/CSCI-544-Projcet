@@ -25,10 +25,10 @@ public class TwitterCrawler extends TimerTask implements StatusListener{
 	
 	public void streamInitialization(){
 		ConfigurationBuilder config = new ConfigurationBuilder();
-	    config.setOAuthConsumerKey("79vyiKl9rYg5BgnD9FM7Y2kqy");
-	    config.setOAuthConsumerSecret("jnH8aseVgSdAT4TGGRKBmvr23hoBb7mxQu82JtTtGy66oNY56w");
-	    config.setOAuthAccessToken("282542631-HYYwFLd1mQDYGAFU68AZO9NIgvwF0r9xpo3ExHUx");
-	    config.setOAuthAccessTokenSecret("yzBusFtCZuV9bOSLLxa6IFNilg5EuECDQ5gwxqgM1MZtG");
+	    config.setOAuthConsumerKey("");
+	    config.setOAuthConsumerSecret("");
+	    config.setOAuthAccessToken("");
+	    config.setOAuthAccessTokenSecret("");
 
 	    twitterStream = new TwitterStreamFactory(config.build()).getInstance();
 	    twitterStream.addListener(this);
