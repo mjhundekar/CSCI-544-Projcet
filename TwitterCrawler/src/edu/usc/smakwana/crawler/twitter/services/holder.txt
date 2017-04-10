@@ -1,0 +1,38 @@
+ConfigurationBuilder cb = new ConfigurationBuilder();
+	    cb.setOAuthConsumerKey("79vyiKl9rYg5BgnD9FM7Y2kqy");
+	    cb.setOAuthConsumerSecret("jnH8aseVgSdAT4TGGRKBmvr23hoBb7mxQu82JtTtGy66oNY56w");
+	    cb.setOAuthAccessToken("282542631-HYYwFLd1mQDYGAFU68AZO9NIgvwF0r9xpo3ExHUx");
+	    cb.setOAuthAccessTokenSecret("yzBusFtCZuV9bOSLLxa6IFNilg5EuECDQ5gwxqgM1MZtG");
+
+	    Twitter twitter = new TwitterFactory(cb.build()).getInstance();
+
+	    int pageno = 1;
+	    String user = "narendramodi";
+	    List statuses = new ArrayList();
+	    
+
+	    while (true) {
+
+	      try {
+
+	        int size = statuses.size(); 
+	        Paging page = new Paging(pageno++, 100);
+	        statuses.addAll(twitter.getUserTimeline(user, page));
+	        if (statuses.size() == size)
+	          break;
+	      }
+	      catch(TwitterException e) {
+
+	        e.printStackTrace();
+	      }
+	    }
+
+	    System.out.println("Total: "+statuses.size());
+	    
+	    Iterator<Status> iterator = statuses.iterator();
+	    
+	    while (iterator.hasNext()) {
+			Status status = (Status) iterator.next();
+			System.out.println(status.getUser().getScreenName() + " ---" + status.getText() );
+			
+		}
