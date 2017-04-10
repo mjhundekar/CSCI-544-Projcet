@@ -18,12 +18,13 @@ import twitter4j.TwitterStream;
 import twitter4j.TwitterStreamFactory;
 import twitter4j.conf.ConfigurationBuilder;
 
-public class TwitterCrawler extends TimerTask implements StatusListener{
+public class TwitterCrawlerFocussed extends TimerTask implements StatusListener{
 	private TwitterStream twitterStream;
 	private PrintWriter printWriter = null;
 
 	
 	public void streamInitialization(){
+		//Junaid Configuartion
 		ConfigurationBuilder config = new ConfigurationBuilder();
 	    config.setOAuthConsumerKey("");
 	    config.setOAuthConsumerSecret("");
@@ -37,8 +38,19 @@ public class TwitterCrawler extends TimerTask implements StatusListener{
 	public void setFiltersToStream(TwitterStream twitterStream){
 		
 		FilterQuery filterQuery = new FilterQuery();
-		double box[][] = {{65.0, 6.0}, {97.35, 35.95}};
-	    filterQuery.locations(box);
+	    long followList []  = {
+	    		372754427l
+	    		,123171317l
+	    		,2501082746l
+	    		,461841349l
+	    		,326621116l
+	    		,458948706l
+	    		,899460578l
+	    		,321271735l
+	    		,50948283l
+	    		,2597843490l
+	    		,3269792066l};
+	    filterQuery.follow(followList);
 	    filterQuery.language("hi");
 
 	    twitterStream.filter(filterQuery);
@@ -52,7 +64,7 @@ public class TwitterCrawler extends TimerTask implements StatusListener{
 			printWriter.close();
 		}
 		
-		String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(new Date());
+		String timeStamp = new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-focussed").format(new Date());
 		try {
 			printWriter = new PrintWriter(timeStamp + ".txt","utf-8");
 		} catch (FileNotFoundException | UnsupportedEncodingException e) {
