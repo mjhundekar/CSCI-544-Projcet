@@ -1,0 +1,15 @@
+[submodule "indic_nlp_resources"]
+	path = indic_nlp_resources
+	url = https://github.com/anoopkunchukuttan/indic_nlp_resources.git
+[submodule "indic_nlp_library"]
+	path = indic_nlp_library
+	url = https://github.com/anoopkunchukuttan/indic_nlp_library.git
+[submodule "spanish_general_election_2016"]
+	path = spanish_general_election_2016
+	url = https://github.com/aitoralmeida/spanish_general_election_2016.git
+[submodule "spanish_general_election_2015"]
+	path = spanish_general_election_2015
+	url = https://github.com/aitoralmeida/spanish_general_election_2015.git
+[submodule "european_parliament_election_2014"]
+	path = european_parliament_election_2014
+	url = https://github.com/aitoralmeida/european_parliament_election_2014.git
