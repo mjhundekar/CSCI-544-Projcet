@@ -1,6 +1,7 @@
 import os, re, string
 from gensim import corpora, utils
 from gensim.models.wrappers.dtmmodel import DtmModel
+from gensim.models.ldamulticore import LdaMulticore
 import numpy as np
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -10,13 +11,13 @@ import codecs;
 sys.setdefaultencoding("utf-8")
 
 
-DTM_PATH="/home/ankit/NLP_Project/dtm/dtm/"
+DTM_PATH="/home/ankit081190/NLP/dtm/dtm"
 
 
 #documents is a list of list containing words for each tweet
 documents=[]
 
-filePath="/home/ankit/NLP_Project/NLPProject/TfIdfCleanTweets/"
+filePath="/home/ankit081190/NLP/CSCI-544-Project/DayWiseTfIdfCleanTweets/"
 fileList=os.listdir(filePath)
 
 
@@ -27,8 +28,8 @@ for files in fileList:
         d=[]
         for line in f:
             for words in line.strip(" ").split(" "):
-                if len(words.strip(" ")) > 0:
-                    d.append(words.strip(" "))
+                if len(words.strip(" ").strip("\n")) > 0:
+                    d.append(words.strip(" ").strip("\n"))
         documents.append(d);
                 
     f.close()
@@ -53,25 +54,27 @@ corpus = DTMcorpus(documents)
 
 
 #path where dtm file is installed
-dtm_path="/home/ankit/NLP_Project/dtm/dtm/dtm"
-model = DtmModel(dtm_path, corpus, time_seq, num_topics=1,
-                 id2word=corpus.dictionary, initialize_lda=True)
+dtm_path="/home/ankit081190/NLP/dtm/dtm/dtm"
+#model = DtmModel(dtm_path, corpus, time_seq, num_topics=1,
+#                 id2word=corpus.dictionary, initialize_lda=True)
 
+model=LdaMulticore(corpus, id2word=corpus.dictionary, num_topics=10)
 
-model.save("DTModel.txt")
+model.save("DTModelMultiCore.txt")
 #Gives top 25 topics
-tp= model.show_topics(num_topics=10, times=1, num_words=100, log=False, formatted=True)
+tp= model.show_topics(num_topics=10, num_words=100, log=False, formatted=True)
 cnt= Counter(tp)
 for i, j in cnt:
-    print i,j.decode("utf-8")
+    print "\nFor topic number: " ,i, "\n"; 
+    print j.decode("utf-8")
 #for i in range(0,model.num_topics-1)):
 #    print model.show_topic
     
     
-topics = model.show_topic(topicid=0, time=1, num_words=100)
-cnt= Counter(topics)
-with codecs.open("topics.txt","w", "utf-8") as f:
-    for i,j in cnt:
-        print i,j;
-        f.write(str(i)+":"+str(j).decode("utf-8")+"\n")
-    f.close()
+#topics = model.show_topic(topicid=0, time=1, num_words=100)
+#cnt= Counter(topics)
+#with codecs.open("topicsMultiLDA.txt","w", "utf-8") as f:
+#    for i,j in cnt:
+#        print i,j;
+#        f.write(str(i)+":"+str(j).decode("utf-8")+"\n")
+#    f.close()
