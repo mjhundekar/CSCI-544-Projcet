@@ -17,7 +17,7 @@ DTM_PATH="/home/ankit081190/NLP/dtm/dtm"
 #documents is a list of list containing words for each tweet
 documents=[]
 
-filePath="/home/ankit081190/NLP/CSCI-544-Project/DayWiseTfIdfCleanTweets/"
+filePath="/home/ankit081190/NLP/CSCI-544-Project/DayWiseTfIdfCleanTweets/Cleaned/"
 fileList=os.listdir(filePath)
 
 
@@ -58,15 +58,20 @@ dtm_path="/home/ankit081190/NLP/dtm/dtm/dtm"
 #model = DtmModel(dtm_path, corpus, time_seq, num_topics=1,
 #                 id2word=corpus.dictionary, initialize_lda=True)
 
-model=LdaMulticore(corpus, id2word=corpus.dictionary, num_topics=10)
+model=LdaMulticore(corpus, id2word=corpus.dictionary, num_topics=100)
 
 model.save("DTModelMultiCore.txt")
 #Gives top 25 topics
-tp= model.show_topics(num_topics=10, num_words=100, log=False, formatted=True)
+tp= model.show_topics(num_topics=100, num_words=100, log=False, formatted=True)
 cnt= Counter(tp)
-for i, j in cnt:
-    print "\nFor topic number: " ,i, "\n"; 
-    print j.decode("utf-8")
+with codecs.open("topicsMultiLDA.txt","w", "utf-8") as f:
+    for i,j in cnt:
+        print i,j;
+        f.write("\nFor Topic Number "+str(i)+":\n"+str(j).decode("utf-8")+"\n")
+    f.close()
+#for i, j in cnt:
+#    print "\nFor topic number: " ,i, "\n"; 
+#    print j.decode("utf-8")
 #for i in range(0,model.num_topics-1)):
 #    print model.show_topic
     
