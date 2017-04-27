@@ -4,9 +4,9 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
-fileList=os.listdir("D:/NLP/Project/CSCI-544-Project/TfIdfCleanTweets/")
-file_path = "D:/NLP/Project/CSCI-544-Project/TfIdfCleanTweets/"
-outputPath = "D:/NLP/Project/CSCI-544-Project/SentimentResults/"
+file_path = "D:/NLP/Project/CSCI-544-Project/DayWiseTfIdfCleanTweets/"
+fileList=os.listdir(file_path)
+outputPath = "D:/NLP/Project/CSCI-544-Project/SentimentResultsFinal/"
 
 def sentiment_ananlysis(tweets):
     output = []
@@ -42,7 +42,7 @@ def sentiment_ananlysis(tweets):
 model = {}
 with codecs.open("sentiment_model.txt", "r", "utf-8") as f:
     model = json.load(f)
-    print "model", model
+    #print "model", model
 
 
 dict_list = {}
