@@ -52,8 +52,8 @@ hindiStopWords=[]
 stopWordsFileName="hindiST.txt"
 readStopWords(hindiStopWords, stopWordsFileName)
 
-inFilePath="/home/ankit/NLP_Project/CSCI-544-Projcet/RawFiles/"
-outFilePath="/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/"
+inFilePath="/home/ankit081190/NLP/CSCI-544-Project/hindiTweets/"
+outFilePath="/home/ankit081190/NLP/CSCI-544-Project/CleanTweets/"
 
 fileList=os.listdir(inFilePath)
 

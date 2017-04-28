@@ -6,10 +6,11 @@ sys.setdefaultencoding("utf-8")
 
 def getValues(word):
     #print "word================>",word,"================"
-    inFilePath="/home/ankit/NLP_Project/CSCI-544-Projcet/SentimentResults/"
+    inFilePath="/home/ankit081190/NLP/CSCI-544-Project/SentimentResultsFinal/"
     d = defaultdict(int)
     fileList=os.listdir(inFilePath)
-
+#    print fileList
+   
     for files in fileList:
         with codecs.open(inFilePath+files,"r", "utf-8") as f:
             for line in f:
@@ -23,11 +24,11 @@ with codecs.open("topics.txt", "r", "utf-8") as f:
         for line in f:
             if ":" in line:
                 #print line.split(":")[1].decode("utf-8")
-                dict=getValues(line.split(":")[1].decode("utf-8").strip())
+                dict=getValues(line.split(":")[0].decode("utf-8").strip())
                 dictStr=""
 		for i, j in dict.items():
                     dictStr+=" :: "+str(i)+" : "+str(j)
-                fopen.write(line.split(":")[1].decode("utf-8").strip()+" \t "+dictStr+"\n")
+                fopen.write(line.split(":")[0].decode("utf-8").strip()+" \t "+dictStr+"\n")
         fopen.close()
     f.close()
 

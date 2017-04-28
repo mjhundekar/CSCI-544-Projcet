@@ -14,9 +14,16 @@ with codecs.open("topicsMultiLDA.txt", "r", "UTF-8") as fp:
         for val in allValues:
             keyWordsDict[val]+=1
 
+with codecs.open("topic.txt", "w", "UTF-8") as fout:
+    for key, value in sorted(keyWordsDict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
+        if (value > 10):
+            fout.write(key+":"+str(value)+"\n")
+        print key
+    fout.close()
 
-for key, value in sorted(keyWordsDict.iteritems(), key=lambda (k,v): (v,k), reverse = True):
-    print key
+exit(1)
+
+
 
 path="../DayWiseTfIdfCleanTweets/"
 files=os.listdir(path)

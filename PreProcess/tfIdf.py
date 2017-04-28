@@ -27,8 +27,8 @@ def tfidf(word, curr_dict, dict_list):
     return tf(word, curr_dict) * idf(word, dict_list)
 
 
-fileList=os.listdir("/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/")
-file_path = "/home/ankit/NLP_Project/CSCI-544-Projcet/CleanTweets/"
+fileList=os.listdir("/home/ankit081190/NLP/CSCI-544-Project/DayWiseTfIdfCleanTweets/")
+file_path = "/home/ankit081190/NLP/CSCI-544-Project/DayWiseTfIdfCleanTweets/"
 
 dict_list = {}
 dict_words = {} 
@@ -39,12 +39,13 @@ for files in fileList:
 	with open(file_path + files,'r') as fp:
 	    for line in fp:
 	        for word in line.strip(" ").split(" "):
-		    if word not in dict_words:
-			dict_words[word] = 0
-     		    if word in dict_list[files]:
-		        dict_list[files][word] += 1
+                    strippedWord=word.strip(" ").strip("\n")
+		    if strippedWord  not in dict_words:
+			dict_words[strippedWord] = 0
+     		    if strippedWord in dict_list[files]:
+		        dict_list[files][strippedWord] += 1
 		    else:
-			dict_list[files][word] = 1
+			dict_list[files][strippedWord] = 1
 
 
 for files in fileList:
@@ -54,7 +55,8 @@ for files in fileList:
 	with open(file_path + files,'r') as fp:
 	    for line in fp:
 	        for word in line.strip(" ").split(" "):
-		    dict_words[word] = tfidf(word, dict_list[files], dict_list)
+                    strippedWord=word.strip(" ").strip("\n")
+		    dict_words[strippedWord] = tfidf(strippedWord, dict_list[files], dict_list)
 
 #print dict_words
 
@@ -75,12 +77,12 @@ for key, value in finalTfIdf.items():
 
 
 
-with open("/home/ankit/NLP_Project/CSCI-544-Projcet/Model/OrignialTfIdf.txt","w") as fp:
+with open("/home/ankit081190/NLP/CSCI-544-Project/Model/OrignialTfIdf.txt","w") as fp:
     json.dump(finalTfIdf,fp,encoding="utf-8", indent=2)
     fp.close()
 
 
-with open("/home/ankit/NLP_Project/CSCI-544-Projcet/Model/tfIdf.txt","w") as fp:
+with open("/home/ankit081190/NLP/CSCI-544-Project/Model/tfIdf.txt","w") as fp:
     json.dump(finalTfIdf_Eighty,fp,encoding="utf-8", indent=2)
     fp.close()
 

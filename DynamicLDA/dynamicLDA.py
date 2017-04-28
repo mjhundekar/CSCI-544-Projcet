@@ -2,6 +2,11 @@ import os, re, string
 from gensim import corpora, utils
 from gensim.models.wrappers.dtmmodel import DtmModel
 from gensim.models.ldamulticore import LdaMulticore
+from gensim.models.ldamodel import *;
+from gensim.corpora.dictionary import Dictionary;
+import pyLDAvis.gensim
+
+
 import numpy as np
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -50,25 +55,39 @@ class DTMcorpus(corpora.textcorpus.TextCorpus):
     def __len__(self):
         return len(self.input)
 
-corpus = DTMcorpus(documents)
+#corpus = DTMcorpus(documents)
+corpus=documents
+dictionary=Dictionary(corpus)
 
+corpus = [dictionary.doc2bow(doc) for doc in corpus]
+for (token, uid) in dictionary.token2id.items():
+        dictionary.id2token[uid] = token
+
+print type(dictionary), type(corpus)
 
 #path where dtm file is installed
 dtm_path="/home/ankit081190/NLP/dtm/dtm/dtm"
+
 #model = DtmModel(dtm_path, corpus, time_seq, num_topics=1,
 #                 id2word=corpus.dictionary, initialize_lda=True)
 
-model=LdaMulticore(corpus, id2word=corpus.dictionary, num_topics=100)
+model=LdaMulticore(corpus, num_topics=10, id2word=dictionary)
 
 model.save("DTModelMultiCore.txt")
 #Gives top 25 topics
-tp= model.show_topics(num_topics=100, num_words=100, log=False, formatted=True)
+
+tp= model.show_topics(num_topics=25, log=False, formatted=True)
+print model.print_topics(num_topics=25)
+data = pyLDAvis.gensim.prepare(model, corpus, dictionary)
+pyLDAvis.save_html(data, 'index_lda.html')
+
 cnt= Counter(tp)
 with codecs.open("topicsMultiLDA.txt","w", "utf-8") as f:
     for i,j in cnt:
         print i,j;
         f.write("\nFor Topic Number "+str(i)+":\n"+str(j).decode("utf-8")+"\n")
     f.close()
+
 #for i, j in cnt:
 #    print "\nFor topic number: " ,i, "\n"; 
 #    print j.decode("utf-8")
